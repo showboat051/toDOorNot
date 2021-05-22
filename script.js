@@ -63,8 +63,9 @@ function postToDo() {
     } else {
         let newListItem = document.createElement('li');
         let newToDo = document.createTextNode(taskInput.value);
-        newListItem.appendChild(newToDo);
+        let finishedToDo = newListItem.appendChild(newToDo);
          
-
+        document.body.appendChild(finishedToDo);
     }
+    taskInput.value = "";
 }
