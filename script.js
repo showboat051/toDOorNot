@@ -64,14 +64,18 @@ function postToDo() {
         let newListItem = document.createElement('li');
         let newToDo = document.createTextNode(taskInput.value);
         let finishedToDo = newListItem.appendChild(newToDo);
-
-
+        
         // appending close button to the to do 
         let xButton = document.createElement('button');
-         xButton.innerHTML = 'X';
+        xButton.innerHTML = 'X';
         xButton.onclick = function () {
             console.log('new button');
-        }
+        } // dynamic button
+
+        
+
+
+        myList.appendChild(finishedToDo);
 
         document.body.appendChild(finishedToDo);
         document.body.appendChild(xButton);
