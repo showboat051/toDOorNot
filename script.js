@@ -1,6 +1,6 @@
 const taskButton = document.getElementById("taskButton");
 const taskInput = document.getElementById("taskInput");
-const myList = document.getElementById("myList");
+const trackedList = document.getElementById("myList");
 
 
 
@@ -55,30 +55,50 @@ taskButton.addEventListener( "click", function (e) {
 // } // end of newToDo()
 
 
-function postToDo() {
+// function postToDo() {
    
     
-    if(taskInput.value === '') {
-        alert("Don't be lazy, DO SOMETHING")
-    } else {
-        let newListItem = document.createElement('li');
-        let newToDo = document.createTextNode(taskInput.value);
-        let finishedToDo = newListItem.appendChild(newToDo);
+//     if(taskInput.value === '') {
+//         alert("Don't be lazy, DO SOMETHING")
+//     } else {
         
-        // appending close button to the to do 
-        let xButton = document.createElement('button');
-        xButton.innerHTML = 'X';
-        xButton.onclick = function () {
-            console.log('new button');
-        } // dynamic button
+//         let newListItem = document.createElement('li');
+//         newListItem.className = "deleteThis";
+        
+//         // var eraseToDo = document.getElementsByClassName("deleteThis");
+//         // for (var i = 0; i < eraseToDo.length; i++) {
+//         //     eraseToDo[i].onclick = function() {
+//         //         var div = this.parentElement;
+//         //         div.style.display = "none";
+//         //     }
+//         // }
+        
+//         let newToDo = document.createTextNode(taskInput.value);
+//         // newToDo.className = "deleteThis";
+
+//         var postedToDo = document.body.appendChild(newToDo);
+//         postedToDo.className = "deleteThis";
+        
+//         // appending close button to the to do 
+//         let xButton = document.createElement('button');
+//         xButton.innerHTML = 'X';
+//         xButton.onclick = function () {
+//             var expendables = document.getElementsByClassName("deleteThis");
+//             expendables.this.style.display = "none";
+//             // this.parentNode.style.display = "none";                    
+//             for (i = 0; i < postedToDo.length; i++) {
+//                 postedToDo[i].style.display = "none";
+//             }
+//             // expendables.style.display = "none";
+//             console.log("new button");
+//         } // dynamic button
 
         
-
-
-        myList.appendChild(finishedToDo);
-
-        document.body.appendChild(finishedToDo);
-        document.body.appendChild(xButton);
-    }
-    taskInput.value = "";
-}
+        
+        
+//         // newListItem.appendChild(xButton);
+//       document.body.appendChild(xButton);
+//         // document.body.appendChild(finishedList);
+//     }
+//     taskInput.value = "";
+// }
