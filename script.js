@@ -1,6 +1,5 @@
 const taskButton = document.getElementById("taskButton");
 const taskInput = document.getElementById("taskInput");
-const trackedList = document.getElementById("myList");
 
 
 
@@ -107,20 +106,12 @@ function postIt() {
     if(taskInput.value === "") {
         alert("Come on, Try to do SOMETHING")
     } else {
-        // create the list item
-        let newListItem = document.createElement("li");
-        
-        // create the text node
+
+        let newListItem = document.createElement("LI");
         let toDoValue = document.createTextNode(taskInput.value);
-        
-        // append the newToDo to the new list item
-        let newToDo = newListItem.appendChild(toDoValue);
+        newListItem.appendChild(toDoValue);
+        document.body.appendChild(newListItem);
 
-        // append the newToDo to the UL
-        trackedList.appendChild(newToDo);
-
-        //append the newToDo to the DOM
-        document.body.appendChild(trackedList);
         
     }
 
