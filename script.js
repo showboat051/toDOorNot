@@ -8,7 +8,6 @@ const taskInput = document.getElementById("taskInput");
 
 taskButton.addEventListener( "click", function (e) {
     e.preventDefault();
-    console.log("clicked");
 });
 
 
@@ -107,10 +106,23 @@ function postIt() {
         alert("Come on, Try to do SOMETHING")
     } else {
 
+        // creates the li for each to do
         let newListItem = document.createElement("LI");
         let toDoValue = document.createTextNode(taskInput.value);
         newListItem.appendChild(toDoValue);
         document.body.appendChild(newListItem);
+
+        // adding a delete button to every to do
+        let xButton = document.createElement("button");
+        xButton.innerHTML = "X";
+        newListItem.appendChild(xButton);
+
+        // adding onclicks to every button
+        xButton.onclick = function () {
+            newListItem.style.display = "none";
+        }
+
+        
 
         
     }
